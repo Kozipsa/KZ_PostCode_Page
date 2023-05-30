@@ -99,21 +99,16 @@
             }
 
             var postData = {
-              roadAddress: data.roadAddress,
+              zonecode: zonecode,
+              defaultAddress: defaultAddress,
+              defaultAddressEnglish: defaultAddressEnglish,
               jibunAddress: jibunAddress,
-              zonecode: data.zonecode,
-              buildingAddress: buildingAddress
-              
-            zonecode: zonecode,
-            defaultAddress: defaultAddress,
-            defaultAddressEnglish: defaultAddressEnglish,
-            jibunAddress: jibunAddress,
-            jibunAddressEnglish: jibunAddressEnglish,
-            roadAddress: roadAddress,
-            roadAddressEnglish: roadAddressEnglish,
-            buildingName: buildingName,
-            townName: townName,
-            townNameEnglish: townNameEnglish
+              jibunAddressEnglish: jibunAddressEnglish,
+              roadAddress: roadAddress,
+              roadAddressEnglish: roadAddressEnglish,
+              buildingName: buildingName,
+              townName: townName,
+              townNameEnglish: townNameEnglish
             };
             window.postMessageToApp(postData);
           },
