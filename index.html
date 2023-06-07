@@ -108,8 +108,15 @@
               townName: townName,
               townNameEnglish: townNameEnglish
             };
-           
-            window.AndroidApp.postMessageToApp(postData);
+            
+            if(!!window.webkit && !!window.webkit.messageHandlers) {
+               window.webkit.messageHandlers.callBackHandler.postMessage(postData);
+            }
+            
+            if(!!window.AndroidApp) {
+                window.AndroidApp.postMessageToApp(zonecode);  
+            }
+            
           },
           width: "100%",
           height: "100%",
